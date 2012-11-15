@@ -1,14 +1,21 @@
 
- History
- =======
+History
+=======
 
 October 2008 - initiation and work on the project by Sidharth Kuruvila
 
 Starting from April 2009   - contributions by Yauhen Yakimovich
 
+Notes from 2012
+--------------
 
- Development
- ===========
+I found this version from http://codinggorilla.domemtech.com/?p=995. The author seems to be
+Ken Domino, which changes are made by him can be looked by doing diff from initial commit
+of this repository and comparing it to the code at https://code.google.com/p/antlrphpruntime/
+which seems to be unmaintained by now. Hence I went and created yet another fork. 
+
+Development
+===========
 
 Some examples are already working (See examples/import). Runtime is in alpha status. Primary
 milstone is aimed at verification of Lexer, Parser generation.
