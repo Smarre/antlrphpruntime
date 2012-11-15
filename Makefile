@@ -9,4 +9,4 @@ jartool:
 tests:
 	cd test;\
 	 java -jar ../antlr.jar Id.g;\
-	 php.exe printids.php
+	 php printids.php
