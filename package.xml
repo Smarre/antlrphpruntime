@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>antlrphpruntime</name>
+ <channel>pear.php.net</channel>
+ <summary>ANTLR PHP runtime</summary>
+ <description>Brings ANTLR to PHP.</description>
+ <lead>
+  <name>Samu Voutilainen</name>
+  <user>Smar</user>
+  <email>samu.voutilainen@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-11-15</date>
+ <time>13:51:21</time>
+ <version>
+  <release>0.0.4</release>
+  <api>0.0.3</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://opensource.org/licenses/BSD-3-Clause">New BSD license</license>
+ <notes>
+Original contributors retains their rights to their changes. The license information
+is from original repository; there was no copy of it so I took freedom to copy it myself
+to LICENSE.
+ </notes>
+ <contents>
+  <dir name="/">
+   <file name="runtime/Php/src/Antlr/Runtime/Misc/FastQueue.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Misc/LookaheadStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/BaseTree.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/BaseTreeAdaptor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/CommonErrorNode.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/CommonTree.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/CommonTreeAdaptor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/CommonTreeNodeStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/ParseTree.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/PatternContextVisitor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteCardinalityException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteEarlyExitException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteEmptyStreamException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteRuleElementStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteRuleNodeStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteRuleSubtreeStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/RewriteRuleTokenStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/Tree.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeAdaptor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeFilter.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeIterator.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeNodeStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeParser.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreePattern.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreePatternLexer.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreePatternParser.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreePatternTreeAdaptor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeRewriter.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeRuleReturnScope.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeVisitor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeVisitorAction.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TreeWizard.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/TypeContextVisitor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/WildcardTreePattern.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Tree/WizardContextVisitor.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/ANTLRFileStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/ANTLRStringStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/BaseRecognizer.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/CharStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/CharStreamState.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/CommonToken.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/CommonTokenStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/DFA.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/EarlyExitException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/FailedPredicateException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/IntStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Lexer.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/MismatchedRangeException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/MismatchedSetException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/MismatchedTokenException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/MissingTokenException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/NoViableAltException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Parser.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/ParserRuleReturnScope.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/RecognitionException.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/RecognizerSharedState.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/RuleReturnScope.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/Token.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/TokenStream.php" role="php" />
+   <file name="runtime/Php/src/Antlr/Runtime/UnwantedTokenException.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.8</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+  <filelist />
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>0.0.4</release>
+    <api>0.0.3</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2012-11-15</date>
+   <license uri="http://opensource.org/licenses/BSD-3-Clause">New BSD license</license>
+   <notes>
+* made to PEAR compliant for ease of use
+   </notes>
+  </release>
+ </changelog>
+</package>
