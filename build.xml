@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="antlr-php-jar" name="Produce Php Target extentesion for the ANTLR Tool as a stand-alone Jar">
+    <target name="init">
+        <property name='product.Name'           value='Antlr Php Runtime'/>
+        <property name='product.name'           value='antlrphpruntime'/>
+        <property name='product.shortname'      value='antlr-php'/>
+
+        <property name='product.version.major'  value='0'/>
+        <property name='product.version.minor'  value='0'/>
+        <property name='product.version.level'  value='3'/>
+        <property name='product.Version'        value='${product.version.major}.${product.version.minor}.${product.version.level}'/>
+        <property name='product.version'        value='${product.version.major}.${product.version.minor}.${product.version.level}'/>
+        <property name='product_version'        value='${product.version.major}_${product.version.minor}_${product.version.level}'/>
+        <property name="year"                   value="2009-2010" />
+        <property name="contributors"           value="Terence Parr, Sidharth Kuruvila, Yauhen Yakimovich, Geoff Speicher,  Rolland Brunec, Benjamin Eberlei" />
+        <property name="copyright"              value="Copyright &#169; ${year} ${contributors}. All Rights Reserved. Distributed under New BSD License." />
+
+
+        <property name="dir.project"            value="." />
+        <property name="dir.bin"                value="${dir.project}/bin" />
+        <property name="dir.build"              value="${dir.project}/build" />
+        <property name="dir.doc"                value="${dir.project}/doc" />
+        <property name="dir.lib"                value="${dir.project}/lib" />
+        <property name="dir.tool"               value="${dir.project}/tool" />
+        <property name="dir.tool.src"           value="${dir.tool}/src/main/java" />
+        <property name="dir.tool.resources"     value="${dir.tool}/src/main/resources" />
+        <property name="jar.antlr-php"          value="${dir.lib}/antlr-php.jar" />
+
+        <path id="classpath">
+            <fileset dir="${dir.lib}" includes="**/*.jar"/>
+        </path>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete dir="${dir.build}"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${dir.build}/classes"/>
+        <javac srcdir="${dir.tool.src}" destdir="${dir.build}/classes" classpathref="classpath" />
+    </target>
+
+    <target name="antlr-php-jar" depends="compile">
+        <delete file="${jar.antlr-php}" />
+        <jar destfile="${jar.antlr-php}" basedir="${dir.build}/classes" filesetmanifest="mergewithoutmain">
+            <fileset dir="${dir.build}/classes"/>
+            <fileset dir="${dir.tool.resources}"/>
+        </jar>
+    </target>
+
+    <target name="test" depends="antlr-php-jar">
+        <exec executable="${dir.project}/gengrammars.sh" />
+        <exec executable="${dir.project}/runtests.sh" />
+    </target>
+</project>

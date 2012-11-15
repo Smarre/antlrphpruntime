@@ -1,0 +1,23 @@
+[v0.0.3]
+
++ changes in runtime and template. SPARQL Grammar (see my other project) generated and parsed (work in progress)
+
+[v0.0.2]
+
++ Another working case in examples/trivialXmlLexer // Y.Y. 06.05.09
+
+
+[v0.0.1]
+
++ CONGRATS! examples/import parser and lexer works perfectly, starting another example // Y.Y. 05.05.09
+
+- fixed Php.stg:
+	added $this->getToken('<lower>') to isolatedLookaheadRangeTest template // Y.Y. 05.05.09
+
++ lexer is working in case of examples/import (compared to java version) // Y.Y. 05.05.09
+
+- fixed: CommonToken setCharPositionInLine method // Y.Y. 05.05.09
+
+- fixed: Lexer constructor
+from __construct($input, $state=null) to __construct($input, &$state=null)
+This looks like a typical potential error when one translates java to php. // Y.Y. 05.05.09

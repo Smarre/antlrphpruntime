@@ -1,0 +1,16 @@
+- Lexer001Test in Python suite shows Lexer as Iterator. Implement that in PHP
+- Refactor out expected tokens (type + text) iteration in the test into an assertion
+- Refactor `State` into BaseRecognition Class (like in Python)
+- Refactor `RuleReturnScope` into arrays?
+- There are some $MEMO_* static variables, can we optimize them away somehow?
+
+- Implement trivial examples to test Lexer and Parser, then switch to AST 
+generation, and then to full sync with ANTLRv3
+
+- Add implementation of StringTemplate class in PHP 
+  (StringTemplateGroup for cminus example)
+
+- Add codegeneration files AST.stg ASTParser.stg ASTTreeParser.stg ST.stg AST.stg ASTTreeParser.stg
+
+- examples: *See TODO in each subfolder. 
+
