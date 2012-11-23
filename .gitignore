@@ -1,2 +1,6 @@
 runtime/Php/test/Antlr/Tests/generated/*.php
 runtime/Php/test/Antlr/Tests/generated/*.tokens
+*.jar
+*.kdev4
+build/
+*.class
