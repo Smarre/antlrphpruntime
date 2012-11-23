@@ -1,4 +1,34 @@
 
+Installation
+============
+
+There is no prebuilt packages at the moment, you need to compile your own version
+from the source. 
+
+    # install antlr 3.4 (or later)
+    vi build.properties
+    ant
+
+If ant ran successfully, you have antlr-php.jar at directory lib/, which contains 
+php runtime that can be used with Ant.
+
+PHP runtime can be packaged and installed using PEAR, with commands
+
+    pear package
+    pear install [package_name]
+
+Now the runtime can be used as any other PEAR package.
+
+Usage
+=====
+
+In theory usage happens by using antlr’s org.antlr.Tool to compile your grammar.
+You need to set both antlr.jar and antlr-php.jar to CLASSPATH and then run
+
+    java org.antlr.Tool Grammar.g 
+
+which results to a tokens file and lexer and parser files written in PHP.
+
 History
 =======
 
@@ -7,7 +37,7 @@ October 2008 - initiation and work on the project by Sidharth Kuruvila
 Starting from April 2009   - contributions by Yauhen Yakimovich
 
 Notes from 2012
---------------
+---------------
 
 I found this version from http://codinggorilla.domemtech.com/?p=995. The author seems to be
 Ken Domino, which changes are made by him can be looked by doing diff from initial commit
