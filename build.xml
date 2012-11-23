@@ -52,6 +52,7 @@
             <fileset dir="${dir.build}/classes"/>
             <fileset dir="${dir.tool.resources}"/>
         </jar>
+        <copy file="${antlr.package}" todir="${dir.lib}"/>
     </target>
 
     <target name="test" depends="antlr-php-jar">
