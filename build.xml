@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="antlr-php-jar" name="Produce Php Target extentesion for the ANTLR Tool as a stand-alone Jar">
     <target name="init">
+        <property file="build.properties" />
         <property name='product.Name'           value='Antlr Php Runtime'/>
         <property name='product.name'           value='antlrphpruntime'/>
         <property name='product.shortname'      value='antlr-php'/>
 
         <property name='product.version.major'  value='0'/>
         <property name='product.version.minor'  value='0'/>
-        <property name='product.version.level'  value='3'/>
+        <property name='product.version.level'  value='4'/>
         <property name='product.Version'        value='${product.version.major}.${product.version.minor}.${product.version.level}'/>
         <property name='product.version'        value='${product.version.major}.${product.version.minor}.${product.version.level}'/>
         <property name='product_version'        value='${product.version.major}_${product.version.minor}_${product.version.level}'/>
-        <property name="year"                   value="2009-2010" />
-        <property name="contributors"           value="Terence Parr, Sidharth Kuruvila, Yauhen Yakimovich, Geoff Speicher,  Rolland Brunec, Benjamin Eberlei" />
+        <property name="year"                   value="2009-2010, 2012" />
+        <property name="contributors"           value="Terence Parr, Sidharth Kuruvila, Yauhen Yakimovich, Geoff Speicher,  Rolland Brunec, Benjamin Eberlei, Samu Voutilainen" />
         <property name="copyright"              value="Copyright &#169; ${year} ${contributors}. All Rights Reserved. Distributed under New BSD License." />
 
 
@@ -37,7 +38,12 @@
 
     <target name="compile" depends="clean">
         <mkdir dir="${dir.build}/classes"/>
-        <javac srcdir="${dir.tool.src}" destdir="${dir.build}/classes" classpathref="classpath" />
+        <javac srcdir="${dir.tool.src}" destdir="${dir.build}/classes">
+        <classpath>
+            <pathelement path="${classpath}"/>
+            <pathelement path="${antlr.package}"/>
+        </classpath>
+        </javac>
     </target>
 
     <target name="antlr-php-jar" depends="compile">
