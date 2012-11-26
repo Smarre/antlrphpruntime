@@ -26,13 +26,13 @@ opts = Trollop::with_standard_exception_handling p do
 end
 
 if opts[:libdir].nil?
-    LIBDIR = "/usr/local/share/antlr-php"
+    LIBDIR = "/usr/local/share/antlr-php/\\*"
 else
     LIBDIR = opts[:libdir]
 end
 
 grammar = opts[:grammar]
 
-Dir.chdir File.dirname(__FILE__) do
-    puts `java -cp #{LIBDIR} org.antlr.Tool #{grammar_file}`
-end
+command = "java -cp #{LIBDIR} org.antlr.Tool #{grammar}"
+puts "Running \"#{command}\""
+puts `#{command}`
