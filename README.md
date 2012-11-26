@@ -19,6 +19,9 @@ PHP runtime can be packaged and installed using PEAR, with commands
 
 Now the runtime can be used as any other PEAR package.
 
+There is also helper script install.rb which installs libraries to
+/usr/local/share/antlr-php and binaries /usr/local/bin.
+
 Usage
 =====
 
@@ -28,6 +31,14 @@ You need to set both antlr.jar and antlr-php.jar to CLASSPATH and then run
     java org.antlr.Tool Grammar.g 
 
 which results to a tokens file and lexer and parser files written in PHP.
+
+There is also helper script gen-antlr-php which can be used to do this generation.
+
+    # ensure you ran install.rb
+    gen-antlr-php -g Foo.g
+
+It automatically loads antlr instance with correct classpath and uses correct antlr
+tool for generation.
 
 History
 =======
