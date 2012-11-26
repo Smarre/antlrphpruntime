@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# encoding: utf-8
 
 require "trollop"
 
@@ -12,6 +13,8 @@ require "trollop"
 p = Trollop::Parser.new do
     opt :grammar, "Grammar file to process", type: :string
     opt :libdir, "Directory where antlrphpruntime is", type: :string
+    opt :verbose, "Be verbose", type: :boolean
+    opt :dry_run, "Don’t actually execute anything", type: :boolean
 end
 
 opts = Trollop::with_standard_exception_handling p do
@@ -34,5 +37,7 @@ end
 grammar = opts[:grammar]
 
 command = "java -cp #{LIBDIR} org.antlr.Tool #{grammar}"
-puts "Running \"#{command}\""
-puts `#{command}`
+
+puts "Executing \"#{command}\"" if opts[:verbose] == true
+
+puts `#{command}` unless opts[:dry_run] == true
