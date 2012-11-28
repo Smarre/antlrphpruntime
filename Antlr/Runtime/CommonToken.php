@@ -14,7 +14,7 @@ class CommonToken extends Token
     public $line;
     public $channel = null;
 
-    public function __construct($input=null, $type, $channel=0, $start=0, $stop=0)
+    public function __construct($input, $type, $channel=0, $start=0, $stop=0)
     {
         $this->input = $input;
         $this->charPositionInLine = $start;
