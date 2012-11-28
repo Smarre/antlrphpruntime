@@ -61,22 +61,23 @@ class TreeRewriter extends TreeParser
             $input = new CommonTreeNodeStream($this->originalAdaptor, $t);
             $this->input->setTokenStream($this->originalTokenStream);
             $this->setBacktrackingLevel(1);
-            switch ($whichRule) {
+            $r = $whichRule->rule();
+            /*switch ($whichRule) {
                 case self::RULE_BOTTOMUP:
                     $this->bottomup();
                     break;
                 case self::RULE_TOPDOWN:
                     $this->topdown();
                     break;
-            }
+            }*/
             $this->setBacktrackingLevel(0);
+
             if ($this->failed()) {
                 return $t;
             }
-            if ($r != null && !$t->equals($r->getTree()) && $r->getTree() != null) { // show any transformations
-                /* System.out.println(((CommonTree)t).toStringTree()+" -> "+
-                  ((CommonTree)r.getTree()).toStringTree()); */
-                // TODO: WHY?
+
+            if ($r != null && !$t->equals($r->getTree()) && $r->getTree() != null) {
+                reportTransformation($t, $r->getTree());
             }
             if ($r != null && $r->getTree() != null) {
                 return $r->getTree();

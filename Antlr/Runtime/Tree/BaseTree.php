@@ -272,7 +272,7 @@ abstract class BaseTree implements Tree
 
     public function setChildIndex($index)
     {
-        
+
     }
 
     /** BaseTree doesn't track parent pointers. */
@@ -281,7 +281,7 @@ abstract class BaseTree implements Tree
         return null;
     }
 
-    public function setParent(Tree $t)
+    public function setParent($t)
     {
 
     }

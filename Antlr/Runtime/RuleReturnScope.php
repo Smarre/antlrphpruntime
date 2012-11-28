@@ -49,7 +49,7 @@ class RuleReturnScope
     /** Has a value potentially if output=AST; */
     public function getTree()
     {
-        return null;
+        return $this->tree;
     }
 
     /** Has a value potentially if output=template; Don't use StringTemplate

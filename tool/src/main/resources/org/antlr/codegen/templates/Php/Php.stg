@@ -92,6 +92,9 @@ use Antlr\Runtime\NoViableAltException;
 use Antlr\Runtime\RecognitionException;
 use Antlr\Runtime\UnwantedtokenException;
 
+use Antlr\Runtime\Tree\RewriteRuleTokenStream;
+use Antlr\Runtime\Tree\RewriteRuleSubtreeStream;
+
 <recognizer>
 ?\>
 >>

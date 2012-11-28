@@ -56,7 +56,7 @@ interface Tree
 
     public function getParent();
 
-    public function setParent(Tree $t);
+    public function setParent($t);
 
     /** Is there is a node above with token type ttype? */
     public function hasAncestor($ttype);

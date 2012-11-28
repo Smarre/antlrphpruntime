@@ -99,11 +99,12 @@ abstract class RewriteRuleElementStream
     public function add($el)
     {
         //System.out.println("add '"+elementDescription+"' is "+el);
-        if ($el == null) {
+        if ($el === null) {
             return;
         }
-        if ($this->elements != null) { // if in list, just add
-            $this->elements->add($el);
+
+        if ($this->elements !== null) { // if in list, just add
+            $this->elements[] = $el;
             return;
         }
         if ($this->singleElement == null) { // no elements yet, track w/o list
@@ -112,7 +113,7 @@ abstract class RewriteRuleElementStream
         }
         // adding 2nd element, move to list
         $this->elements = array();
-        $this->elements->add(singleElement);
+        $this->elements[] = $this->singleElement;
         $this->singleElement = null;
         $this->elements[] = $el;
     }
@@ -124,7 +125,7 @@ abstract class RewriteRuleElementStream
      */
     public function nextTree()
     {
-        $n = $this->count();
+        $n = $this->size();
         if ($this->dirty || ($this->cursor >= $n && $n == 1)) {
             // if out of elements and size is 1, dup
             $el = $this->_next();

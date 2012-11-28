@@ -43,7 +43,7 @@ class CommonTree extends BaseTree
 
     /**
      * A single token is the payload
-     * 
+     *
      * @var Token
      */
     public $token;
@@ -187,8 +187,21 @@ class CommonTree extends BaseTree
         return $this->parent;
     }
 
-    public function setParent(Tree $t)
+    public function setParent($t)
     {
+        if($t === null) {
+            return;
+        }
+
+        // because php tries to validate null to be instance of given argument (Tree),
+        // we need to first check if it is null and then validate that it implements the interface.
+
+        $class = new \ReflectionClass($t);
+        if(!$class->implementsInterface("Antlr\\Runtime\\Tree\\Tree")) {
+            throw new \Exception("setParent(\$t): Given argument does not implement interface Tree.");
+            return;
+        }
+
         $this->parent = $t;
     }
 

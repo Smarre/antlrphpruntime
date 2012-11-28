@@ -169,7 +169,6 @@ abstract class BaseTreeAdaptor implements TreeAdaptor
     /** Transform ^(nil x) to x and nil to null */
     public function rulePostProcessing($root)
     {
-        //System.out.println("rulePostProcessing: "+((Tree)root).toStringTree());
         $r = $root;
         if ($r != null && $r->isNil()) {
             if ($r->getChildCount() == 0) {
@@ -197,6 +196,10 @@ abstract class BaseTreeAdaptor implements TreeAdaptor
         return $t;
     }
 
+    /**
+     * Modelled from Java’s
+     * public Object create(int tokenType, String text)
+     */
     public function createFromType($tokenType, $text)
     {
         $fromToken = $this->createToken($tokenType, $text);
