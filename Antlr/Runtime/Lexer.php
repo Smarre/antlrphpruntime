@@ -11,7 +11,8 @@ abstract class Lexer extends BaseRecognizer
 
     public function __construct($input, &$state=null)
     {
-        if (is_string($input)) {
+        // token identifiers seems to always be ints
+        if (is_int($input) || is_string($input)) {
             $input = new ANTLRStringStream($input);
         }
 
