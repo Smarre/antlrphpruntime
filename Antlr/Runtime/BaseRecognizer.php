@@ -338,7 +338,7 @@ abstract class BaseRecognizer
      */
     public function beginResync()
     {
-        
+
     }
 
     public function endResync()
@@ -928,5 +928,5 @@ abstract class BaseRecognizer
 		$ret = ord($replaced);
 		return $ret;
 	}
-    
+
 }
