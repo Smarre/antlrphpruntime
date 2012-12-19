@@ -12,12 +12,26 @@ from the source.
 If ant ran successfully, you have antlr-php.jar at directory lib/, which contains 
 php runtime that can be used with Ant.
 
+Installation from PEAR
+----------------------
+
+PHP runtime can be installed from PEAR:
+
+    pear channel-discover pear.smar.fi
+    pear install channel://pear.smar.fi/antlrphpruntime-0.0.4
+
+Manual installation
+-------------------
+
 PHP runtime can be packaged and installed using PEAR, with commands
 
     pear package
     pear install [package_name]
 
 Now the runtime can be used as any other PEAR package.
+
+Helper script
+-------------
 
 There is also helper script install.rb which installs libraries to
 /usr/local/share/antlr-php and binaries /usr/local/bin.
