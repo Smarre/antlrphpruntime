@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>antlrphpruntime</name>
- <channel>pear.php.net</channel>
+ <channel>pear.smar.fi</channel>
  <summary>ANTLR PHP runtime</summary>
  <description>Brings ANTLR to PHP.</description>
  <lead>
   <name>Samu Voutilainen</name>
-  <user>Smar</user>
+  <user>smar</user>
   <email>samu.voutilainen@gmail.com</email>
   <active>yes</active>
  </lead>
