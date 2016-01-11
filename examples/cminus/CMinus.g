@@ -68,7 +68,7 @@ scope slist;
     ;
 
 formalParameter
-    :   type declarator 
+    :   type declarator
         -> parameter(type={$type.st},name={$declarator.st})
     ;
 
@@ -134,7 +134,7 @@ atom
     : ID -> refVar(id={$ID.text})
     | INT -> iconst(value={$INT.text})
     | '(' expr ')' -> {$expr.st}
-    ; 
+    ;
 
 ID  :   ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;
@@ -143,4 +143,4 @@ INT	:	('0'..'9')+
 	;
 
 WS  :   (' ' | '\t' | '\r' | '\n')+ {$channel=HIDDEN;}
-    ;    
+    ;
