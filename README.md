@@ -61,6 +61,12 @@ October 2008 - initiation and work on the project by Sidharth Kuruvila
 
 Starting from April 2009   - contributions by Yauhen Yakimovich
 
+Current status
+--------------
+
+Antlr PHP runtime has been seen running with PHP 7.0. The test suite is more or less broken,
+even with PHP 5.X versions.
+
 Notes from 2012
 ---------------
 
